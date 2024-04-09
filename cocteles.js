@@ -1,5 +1,6 @@
 var bebida1 = {
     numero: "1",
+    imagen: new Image(),
     nombre: "Canary Cabbler",
     numIngredientes: 3,
     ingredientes: ["Vodka", "Pre-Batch Canary", "Zumo Limon"],
@@ -8,6 +9,7 @@ var bebida1 = {
 
 var bebida2 = {
     numero: "2",
+    imagen: new Image(),
     nombre: "Spicy Toucan",
     numIngredientes: 3,
     ingredientes: ["Mezcal", "Pre-Batch Toucan", "Tintura Pipilongo"],
@@ -16,6 +18,7 @@ var bebida2 = {
 
 var bebida3 = {
     numero: "3",
+    imagen: new Image(),
     nombre: "Tiki Cardenal",
     numIngredientes: 3,
     ingredientes: ["Ron", "Pre-Batch Cardenal", "Zumo Limon"],
@@ -24,6 +27,7 @@ var bebida3 = {
 
 var bebida4 = {
     numero: "4",
+    imagen: new Image(),
     nombre: "Turpial Sling",
     numIngredientes: 3,
     ingredientes: ["Whisky", "Pre-Batch Turpial", "Zumo Limon"],
@@ -32,11 +36,14 @@ var bebida4 = {
 
 var bebida5 = {
     numero: "5",
+    imagen: new Image(),
     nombre: "Falcon Highball",
     numIngredientes: 4,
     ingredientes: ["Whisky", "Pre-Batch Falcon", "Zumo Limon", "Soda"],
     metodo: "agitado"
 };
+
+
 
 function generarNumeroAleatorio() {
     document.getElementById('titulo').innerText = '¿Otra vez?';
@@ -63,7 +70,7 @@ function generarNumeroAleatorio() {
 
 function vaciarInputs() {
     var container = document.getElementById("inputContainer");
-    container.innerHTML = ''; 
+    container.innerHTML = '';
 }
 
 function btnVerifi() {
@@ -105,4 +112,61 @@ function btnVerifi() {
             }
         }
     }
+    return bebida;
+}
+
+function mostReceta(bebida){
+
+    var bebida = btnVerifi();
+
+    console.log(bebida);
+
+    var contenedor = document.getElementById("nombre");
+    var contenedor2 = document.getElementById("ingredientes");
+    var contenedor3 = document.getElementById("metodo");
+
+    contenedor.textContent = bebida.nombre;
+
+    var contenidoHTML = "";
+    for (var i = 0; i < bebida.numIngredientes; i++) {
+        contenidoHTML +=(i+1) + ": " +  bebida.ingredientes[i] + "<br>";
+        console.log(bebida.ingredientes[i]);
+    }
+    
+    // Asignamos el contenido HTML al contenedor
+    contenedor2.innerHTML = contenidoHTML;
+
+    contenedor3.textContent = bebida.metodo;
+
+    bebida1.imagen.src = "image/logo.jpg";
+    bebida2.imagen.src = "image/logo.jpg";
+    bebida3.imagen.src = "image/logo.jpg";
+    bebida4.imagen.src = "image/logo.jpg";
+    bebida5.imagen.src = "image/logo.jpg";
+    
+    bebida1.imagen.onload = function() {
+        var contenedor = document.getElementById("contenedorImagen");
+        contenedor.appendChild(bebida1.imagen);
+    };
+    
+    bebida2.imagen.onload = function() {
+        var contenedor = document.getElementById("contenedorImagen");
+        contenedor.appendChild(bebida1.imagen);
+    };
+    
+    bebida3.imagen.onload = function() {
+        var contenedor = document.getElementById("contenedorImagen");
+        contenedor.appendChild(bebida1.imagen);
+    };
+    
+    bebida4.imagen.onload = function() {
+        var contenedor = document.getElementById("contenedorImagen");
+        contenedor.appendChild(bebida1.imagen);
+    };
+    
+    bebida5.imagen.onload = function() {
+        var contenedor = document.getElementById("contenedorImagen");
+        contenedor.appendChild(bebida1.imagen);
+    };
+
 }
