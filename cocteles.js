@@ -2,7 +2,7 @@ var bebida1 = {
     numero: "1",
     nombre: "Canary Cabbler",
     numIngredientes: 3,
-    ingredientes: ["Vodka", "Pre-Batch Canary", "Zumo Limon"],
+    ingredientes: ["Vodka", "Pre-Batch Canary", "Limon"],
     metodo: "agitado"
 };
 
@@ -10,15 +10,15 @@ var bebida2 = {
     numero: "2",
     nombre: "Spicy Toucan",
     numIngredientes: 3,
-    ingredientes: ["Mezcal", "Pre-Batch Toucan", "Tintura Pipilongo"],
-    metodo: "agitado"
+    ingredientes: ["Mezcal", "Pre-Batch Toucan", "Pipilongo"],
+    metodo: "agitado",
 };
 
 var bebida3 = {
     numero: "3",
     nombre: "Tiki Cardenal",
     numIngredientes: 3,
-    ingredientes: ["Ron", "Pre-Batch Cardenal", "Zumo Limon"],
+    ingredientes: ["Ron", "Pre-Batch Cardenal", "Limon"],
     metodo: "agitado"
 };
 
@@ -26,7 +26,7 @@ var bebida4 = {
     numero: "4",
     nombre: "Turpial Sling",
     numIngredientes: 3,
-    ingredientes: ["Whisky", "Pre-Batch Turpial", "Zumo Limon"],
+    ingredientes: ["Whisky", "Pre-Batch Turpial", "Limon"],
     metodo: "agitado"
 };
 
@@ -34,7 +34,7 @@ var bebida5 = {
     numero: "5",
     nombre: "Falcon Highball",
     numIngredientes: 4,
-    ingredientes: ["Whisky", "Pre-Batch Falcon", "Zumo Limon", "Soda"],
+    ingredientes: ["Whisky", "Pre-Batch Falcon", "Limon", "Soda"],
     metodo: "agitado"
 };
 
